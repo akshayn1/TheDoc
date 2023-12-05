@@ -21,6 +21,7 @@ mixin _$AddImageEvent {
     required TResult Function() addImage,
     required TResult Function() initialize,
     required TResult Function(int key) deleteImage,
+    required TResult Function() rotateImage,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -28,6 +29,7 @@ mixin _$AddImageEvent {
     TResult? Function()? addImage,
     TResult? Function()? initialize,
     TResult? Function(int key)? deleteImage,
+    TResult? Function()? rotateImage,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -35,6 +37,7 @@ mixin _$AddImageEvent {
     TResult Function()? addImage,
     TResult Function()? initialize,
     TResult Function(int key)? deleteImage,
+    TResult Function()? rotateImage,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -43,6 +46,7 @@ mixin _$AddImageEvent {
     required TResult Function(AddImage value) addImage,
     required TResult Function(Initialize value) initialize,
     required TResult Function(DeleteImage value) deleteImage,
+    required TResult Function(RotateImage value) rotateImage,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -50,6 +54,7 @@ mixin _$AddImageEvent {
     TResult? Function(AddImage value)? addImage,
     TResult? Function(Initialize value)? initialize,
     TResult? Function(DeleteImage value)? deleteImage,
+    TResult? Function(RotateImage value)? rotateImage,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -57,6 +62,7 @@ mixin _$AddImageEvent {
     TResult Function(AddImage value)? addImage,
     TResult Function(Initialize value)? initialize,
     TResult Function(DeleteImage value)? deleteImage,
+    TResult Function(RotateImage value)? rotateImage,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -97,12 +103,18 @@ class __$$AddImageCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$AddImage implements AddImage {
+class _$AddImage with DiagnosticableTreeMixin implements AddImage {
   const _$AddImage();
 
   @override
-  String toString() {
+  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
     return 'AddImageEvent.addImage()';
+  }
+
+  @override
+  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
+    super.debugFillProperties(properties);
+    properties.add(DiagnosticsProperty('type', 'AddImageEvent.addImage'));
   }
 
   @override
@@ -120,6 +132,7 @@ class _$AddImage implements AddImage {
     required TResult Function() addImage,
     required TResult Function() initialize,
     required TResult Function(int key) deleteImage,
+    required TResult Function() rotateImage,
   }) {
     return addImage();
   }
@@ -130,6 +143,7 @@ class _$AddImage implements AddImage {
     TResult? Function()? addImage,
     TResult? Function()? initialize,
     TResult? Function(int key)? deleteImage,
+    TResult? Function()? rotateImage,
   }) {
     return addImage?.call();
   }
@@ -140,6 +154,7 @@ class _$AddImage implements AddImage {
     TResult Function()? addImage,
     TResult Function()? initialize,
     TResult Function(int key)? deleteImage,
+    TResult Function()? rotateImage,
     required TResult orElse(),
   }) {
     if (addImage != null) {
@@ -154,6 +169,7 @@ class _$AddImage implements AddImage {
     required TResult Function(AddImage value) addImage,
     required TResult Function(Initialize value) initialize,
     required TResult Function(DeleteImage value) deleteImage,
+    required TResult Function(RotateImage value) rotateImage,
   }) {
     return addImage(this);
   }
@@ -164,6 +180,7 @@ class _$AddImage implements AddImage {
     TResult? Function(AddImage value)? addImage,
     TResult? Function(Initialize value)? initialize,
     TResult? Function(DeleteImage value)? deleteImage,
+    TResult? Function(RotateImage value)? rotateImage,
   }) {
     return addImage?.call(this);
   }
@@ -174,6 +191,7 @@ class _$AddImage implements AddImage {
     TResult Function(AddImage value)? addImage,
     TResult Function(Initialize value)? initialize,
     TResult Function(DeleteImage value)? deleteImage,
+    TResult Function(RotateImage value)? rotateImage,
     required TResult orElse(),
   }) {
     if (addImage != null) {
@@ -205,12 +223,18 @@ class __$$InitializeCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$Initialize implements Initialize {
+class _$Initialize with DiagnosticableTreeMixin implements Initialize {
   const _$Initialize();
 
   @override
-  String toString() {
+  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
     return 'AddImageEvent.initialize()';
+  }
+
+  @override
+  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
+    super.debugFillProperties(properties);
+    properties.add(DiagnosticsProperty('type', 'AddImageEvent.initialize'));
   }
 
   @override
@@ -228,6 +252,7 @@ class _$Initialize implements Initialize {
     required TResult Function() addImage,
     required TResult Function() initialize,
     required TResult Function(int key) deleteImage,
+    required TResult Function() rotateImage,
   }) {
     return initialize();
   }
@@ -238,6 +263,7 @@ class _$Initialize implements Initialize {
     TResult? Function()? addImage,
     TResult? Function()? initialize,
     TResult? Function(int key)? deleteImage,
+    TResult? Function()? rotateImage,
   }) {
     return initialize?.call();
   }
@@ -248,6 +274,7 @@ class _$Initialize implements Initialize {
     TResult Function()? addImage,
     TResult Function()? initialize,
     TResult Function(int key)? deleteImage,
+    TResult Function()? rotateImage,
     required TResult orElse(),
   }) {
     if (initialize != null) {
@@ -262,6 +289,7 @@ class _$Initialize implements Initialize {
     required TResult Function(AddImage value) addImage,
     required TResult Function(Initialize value) initialize,
     required TResult Function(DeleteImage value) deleteImage,
+    required TResult Function(RotateImage value) rotateImage,
   }) {
     return initialize(this);
   }
@@ -272,6 +300,7 @@ class _$Initialize implements Initialize {
     TResult? Function(AddImage value)? addImage,
     TResult? Function(Initialize value)? initialize,
     TResult? Function(DeleteImage value)? deleteImage,
+    TResult? Function(RotateImage value)? rotateImage,
   }) {
     return initialize?.call(this);
   }
@@ -282,6 +311,7 @@ class _$Initialize implements Initialize {
     TResult Function(AddImage value)? addImage,
     TResult Function(Initialize value)? initialize,
     TResult Function(DeleteImage value)? deleteImage,
+    TResult Function(RotateImage value)? rotateImage,
     required TResult orElse(),
   }) {
     if (initialize != null) {
@@ -328,15 +358,23 @@ class __$$DeleteImageCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$DeleteImage implements DeleteImage {
+class _$DeleteImage with DiagnosticableTreeMixin implements DeleteImage {
   const _$DeleteImage({required this.key});
 
   @override
   final int key;
 
   @override
-  String toString() {
+  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
     return 'AddImageEvent.deleteImage(key: $key)';
+  }
+
+  @override
+  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
+    super.debugFillProperties(properties);
+    properties
+      ..add(DiagnosticsProperty('type', 'AddImageEvent.deleteImage'))
+      ..add(DiagnosticsProperty('key', key));
   }
 
   @override
@@ -362,6 +400,7 @@ class _$DeleteImage implements DeleteImage {
     required TResult Function() addImage,
     required TResult Function() initialize,
     required TResult Function(int key) deleteImage,
+    required TResult Function() rotateImage,
   }) {
     return deleteImage(key);
   }
@@ -372,6 +411,7 @@ class _$DeleteImage implements DeleteImage {
     TResult? Function()? addImage,
     TResult? Function()? initialize,
     TResult? Function(int key)? deleteImage,
+    TResult? Function()? rotateImage,
   }) {
     return deleteImage?.call(key);
   }
@@ -382,6 +422,7 @@ class _$DeleteImage implements DeleteImage {
     TResult Function()? addImage,
     TResult Function()? initialize,
     TResult Function(int key)? deleteImage,
+    TResult Function()? rotateImage,
     required TResult orElse(),
   }) {
     if (deleteImage != null) {
@@ -396,6 +437,7 @@ class _$DeleteImage implements DeleteImage {
     required TResult Function(AddImage value) addImage,
     required TResult Function(Initialize value) initialize,
     required TResult Function(DeleteImage value) deleteImage,
+    required TResult Function(RotateImage value) rotateImage,
   }) {
     return deleteImage(this);
   }
@@ -406,6 +448,7 @@ class _$DeleteImage implements DeleteImage {
     TResult? Function(AddImage value)? addImage,
     TResult? Function(Initialize value)? initialize,
     TResult? Function(DeleteImage value)? deleteImage,
+    TResult? Function(RotateImage value)? rotateImage,
   }) {
     return deleteImage?.call(this);
   }
@@ -416,6 +459,7 @@ class _$DeleteImage implements DeleteImage {
     TResult Function(AddImage value)? addImage,
     TResult Function(Initialize value)? initialize,
     TResult Function(DeleteImage value)? deleteImage,
+    TResult Function(RotateImage value)? rotateImage,
     required TResult orElse(),
   }) {
     if (deleteImage != null) {
@@ -435,8 +479,129 @@ abstract class DeleteImage implements AddImageEvent {
 }
 
 /// @nodoc
+abstract class _$$RotateImageCopyWith<$Res> {
+  factory _$$RotateImageCopyWith(
+          _$RotateImage value, $Res Function(_$RotateImage) then) =
+      __$$RotateImageCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$$RotateImageCopyWithImpl<$Res>
+    extends _$AddImageEventCopyWithImpl<$Res, _$RotateImage>
+    implements _$$RotateImageCopyWith<$Res> {
+  __$$RotateImageCopyWithImpl(
+      _$RotateImage _value, $Res Function(_$RotateImage) _then)
+      : super(_value, _then);
+}
+
+/// @nodoc
+
+class _$RotateImage with DiagnosticableTreeMixin implements RotateImage {
+  const _$RotateImage();
+
+  @override
+  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
+    return 'AddImageEvent.rotateImage()';
+  }
+
+  @override
+  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
+    super.debugFillProperties(properties);
+    properties.add(DiagnosticsProperty('type', 'AddImageEvent.rotateImage'));
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType && other is _$RotateImage);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() addImage,
+    required TResult Function() initialize,
+    required TResult Function(int key) deleteImage,
+    required TResult Function() rotateImage,
+  }) {
+    return rotateImage();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? addImage,
+    TResult? Function()? initialize,
+    TResult? Function(int key)? deleteImage,
+    TResult? Function()? rotateImage,
+  }) {
+    return rotateImage?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? addImage,
+    TResult Function()? initialize,
+    TResult Function(int key)? deleteImage,
+    TResult Function()? rotateImage,
+    required TResult orElse(),
+  }) {
+    if (rotateImage != null) {
+      return rotateImage();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(AddImage value) addImage,
+    required TResult Function(Initialize value) initialize,
+    required TResult Function(DeleteImage value) deleteImage,
+    required TResult Function(RotateImage value) rotateImage,
+  }) {
+    return rotateImage(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(AddImage value)? addImage,
+    TResult? Function(Initialize value)? initialize,
+    TResult? Function(DeleteImage value)? deleteImage,
+    TResult? Function(RotateImage value)? rotateImage,
+  }) {
+    return rotateImage?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(AddImage value)? addImage,
+    TResult Function(Initialize value)? initialize,
+    TResult Function(DeleteImage value)? deleteImage,
+    TResult Function(RotateImage value)? rotateImage,
+    required TResult orElse(),
+  }) {
+    if (rotateImage != null) {
+      return rotateImage(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class RotateImage implements AddImageEvent {
+  const factory RotateImage() = _$RotateImage;
+}
+
+/// @nodoc
 mixin _$AddImageState {
   List<ImageListModel> get imageDbList => throw _privateConstructorUsedError;
+  int get rotatedegree => throw _privateConstructorUsedError;
 
   @JsonKey(ignore: true)
   $AddImageStateCopyWith<AddImageState> get copyWith =>
@@ -449,7 +614,7 @@ abstract class $AddImageStateCopyWith<$Res> {
           AddImageState value, $Res Function(AddImageState) then) =
       _$AddImageStateCopyWithImpl<$Res, AddImageState>;
   @useResult
-  $Res call({List<ImageListModel> imageDbList});
+  $Res call({List<ImageListModel> imageDbList, int rotatedegree});
 }
 
 /// @nodoc
@@ -466,12 +631,17 @@ class _$AddImageStateCopyWithImpl<$Res, $Val extends AddImageState>
   @override
   $Res call({
     Object? imageDbList = null,
+    Object? rotatedegree = null,
   }) {
     return _then(_value.copyWith(
       imageDbList: null == imageDbList
           ? _value.imageDbList
           : imageDbList // ignore: cast_nullable_to_non_nullable
               as List<ImageListModel>,
+      rotatedegree: null == rotatedegree
+          ? _value.rotatedegree
+          : rotatedegree // ignore: cast_nullable_to_non_nullable
+              as int,
     ) as $Val);
   }
 }
@@ -484,7 +654,7 @@ abstract class _$$_InitialCopyWith<$Res>
       __$$_InitialCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({List<ImageListModel> imageDbList});
+  $Res call({List<ImageListModel> imageDbList, int rotatedegree});
 }
 
 /// @nodoc
@@ -498,20 +668,27 @@ class __$$_InitialCopyWithImpl<$Res>
   @override
   $Res call({
     Object? imageDbList = null,
+    Object? rotatedegree = null,
   }) {
     return _then(_$_Initial(
       imageDbList: null == imageDbList
           ? _value._imageDbList
           : imageDbList // ignore: cast_nullable_to_non_nullable
               as List<ImageListModel>,
+      rotatedegree: null == rotatedegree
+          ? _value.rotatedegree
+          : rotatedegree // ignore: cast_nullable_to_non_nullable
+              as int,
     ));
   }
 }
 
 /// @nodoc
 
-class _$_Initial implements _Initial {
-  const _$_Initial({required final List<ImageListModel> imageDbList})
+class _$_Initial with DiagnosticableTreeMixin implements _Initial {
+  const _$_Initial(
+      {required final List<ImageListModel> imageDbList,
+      required this.rotatedegree})
       : _imageDbList = imageDbList;
 
   final List<ImageListModel> _imageDbList;
@@ -523,8 +700,20 @@ class _$_Initial implements _Initial {
   }
 
   @override
-  String toString() {
-    return 'AddImageState(imageDbList: $imageDbList)';
+  final int rotatedegree;
+
+  @override
+  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
+    return 'AddImageState(imageDbList: $imageDbList, rotatedegree: $rotatedegree)';
+  }
+
+  @override
+  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
+    super.debugFillProperties(properties);
+    properties
+      ..add(DiagnosticsProperty('type', 'AddImageState'))
+      ..add(DiagnosticsProperty('imageDbList', imageDbList))
+      ..add(DiagnosticsProperty('rotatedegree', rotatedegree));
   }
 
   @override
@@ -533,12 +722,14 @@ class _$_Initial implements _Initial {
         (other.runtimeType == runtimeType &&
             other is _$_Initial &&
             const DeepCollectionEquality()
-                .equals(other._imageDbList, _imageDbList));
+                .equals(other._imageDbList, _imageDbList) &&
+            (identical(other.rotatedegree, rotatedegree) ||
+                other.rotatedegree == rotatedegree));
   }
 
   @override
-  int get hashCode => Object.hash(
-      runtimeType, const DeepCollectionEquality().hash(_imageDbList));
+  int get hashCode => Object.hash(runtimeType,
+      const DeepCollectionEquality().hash(_imageDbList), rotatedegree);
 
   @JsonKey(ignore: true)
   @override
@@ -548,11 +739,14 @@ class _$_Initial implements _Initial {
 }
 
 abstract class _Initial implements AddImageState {
-  const factory _Initial({required final List<ImageListModel> imageDbList}) =
-      _$_Initial;
+  const factory _Initial(
+      {required final List<ImageListModel> imageDbList,
+      required final int rotatedegree}) = _$_Initial;
 
   @override
   List<ImageListModel> get imageDbList;
+  @override
+  int get rotatedegree;
   @override
   @JsonKey(ignore: true)
   _$$_InitialCopyWith<_$_Initial> get copyWith =>

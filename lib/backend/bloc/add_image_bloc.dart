@@ -3,6 +3,7 @@ import 'dart:developer';
 import 'package:bloc/bloc.dart';
 import 'package:document/backend/Db/db_hive.dart';
 import 'package:document/backend/model/image_list_model.dart';
+import 'package:flutter/foundation.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:image_picker/image_picker.dart';
 part 'add_image_event.dart';
@@ -13,7 +14,7 @@ class AddImageBloc extends Bloc<AddImageEvent, AddImageState> {
   AddImageBloc() : super(AddImageState.initial()) {
     on<Initialize>((event, emit) async {
       final List<ImageListModel> list = await loadImage();
-      final state = AddImageState(imageDbList: list);
+      final state = AddImageState(imageDbList: list, rotatedegree: 0);
       emit(state);
       return;
     });
@@ -31,12 +32,15 @@ class AddImageBloc extends Bloc<AddImageEvent, AddImageState> {
         addImage(value: imageListModel);
       }
       final List<ImageListModel> list = await loadImage();
-      final state = AddImageState(imageDbList: list);
+      final state = AddImageState(imageDbList: list, rotatedegree: 0);
       emit(state);
     });
     on<DeleteImage>((event, emit) {
       log("sdfksjdf");
       deleteImage(event.key);
+    });
+    on<RotateImage>((event, emit) {
+      return emit(state.copyWith(rotatedegree: state.rotatedegree + 1));
     });
   }
 }
