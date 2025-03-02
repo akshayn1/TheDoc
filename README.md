@@ -23,7 +23,7 @@ A **Flutter-based** Document Saver app designed to securely store and manage imp
 
 ## 📥 Installation
 ```sh
-git clone https://github.com/your-username/doc-app.git
+git clone https://github.com/akshayn1/TheDoc.git
 cd doc-app
 flutter pub get
 flutter run
